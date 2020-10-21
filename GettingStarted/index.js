@@ -3,8 +3,9 @@ const firstApplication = {
     return {
       subTitle: "Introduction to Vuejs",
       classNumber: 1,
-      courses: ["HTML", "CSS", "JS", "Vuejs"],
+      courses: ["CSS", "JS", "Vuejs", "C#"],
       showParagraph: true,
+      fontColor: "red"
     };
   },
   methods: {

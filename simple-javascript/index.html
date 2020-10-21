@@ -9,10 +9,31 @@
     <p id="prikaz">igorpav</p>
     <input type="text" value="igorpav" oninput="onInput(event)" />
 
+    <hr />
+
+    <ul>
+      <li>#1 HTML</li>
+      <li>#2 CSS</li>
+      <li>#3 JS</li>
+      <li>#4 VUEJS</li>
+      <li>#5 C#</li>
+      <li>#6 SQL</li>
+      <li>#7 ASP.NET MVC</li>
+    </ul>
+
     <script>
       function onInput(e) {
         document.getElementById("prikaz").innerText = e.target.value;
       }
+
+    //   for (num in [1, 2, 3, 4]) {
+    //     console.log(num);
+    //   }
+
+      [1, 2, 3, 4].forEach(function (num, i) {
+        console.log("Element:" + num);
+        console.log("Index:" + i);
+      });
     </script>
   </body>
 </html>

@@ -35,6 +35,19 @@
       <!-- V-BIND -->
       <!-- <input type="text" v-bind:value="subTitle" v-on:input="onSubtitleInput($event)" /> -->
       <input type="text" :value="subTitle" @input="onSubtitleInput($event)" />
+      <!-- V-MODEL -->
+      <hr />
+      <br />
+      <input type="text" v-model="fontColor" />
+      <p :class="fontColor">{{ fontColor }}</p>
+
+      <hr />
+      <!-- V-FOR -->
+      <ul>
+        <!-- <li v-for="num in [1,2,3,4]">{{ num }}</li> -->
+        <!-- <li v-for="course in courses"># {{ course }}</li> -->
+        <li v-for="(course, index) in courses">#{{index+1}} {{ course }}</li>
+      </ul>
     </div>
 
     <script src="https://unpkg.com/vue@next"></script>
