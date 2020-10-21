@@ -26,14 +26,22 @@
         document.getElementById("prikaz").innerText = e.target.value;
       }
 
-    //   for (num in [1, 2, 3, 4]) {
-    //     console.log(num);
-    //   }
+      //   for (num in [1, 2, 3, 4]) {
+      //     console.log(num);
+      //   }
 
       [1, 2, 3, 4].forEach(function (num, i) {
         console.log("Element:" + num);
         console.log("Index:" + i);
       });
+
+      var age = 29;
+      var person = {
+        name: "John",
+        someAge: age
+      };
+      person.someAge= 30;
+      console.log(person)
     </script>
   </body>
 </html>

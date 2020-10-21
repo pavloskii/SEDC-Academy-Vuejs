@@ -48,6 +48,13 @@
         <!-- <li v-for="course in courses"># {{ course }}</li> -->
         <li v-for="(course, index) in courses">#{{index+1}} {{ course }}</li>
       </ul>
+      <hr />
+      <!-- WATCH -->
+      <p>first: {{firstName}}, last: {{lastName}}, full name: {{fullName}}</p>
+      <button @click="firstName='Riste'">Change First Name</button>
+      <button @click="lastName='Pazarkoski'">Change Last Name</button>
+      <hr />
+      <p>{{computedFullName}}</p>
     </div>
 
     <script src="https://unpkg.com/vue@next"></script>
