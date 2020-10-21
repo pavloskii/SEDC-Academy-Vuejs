@@ -1,89 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Class1: Vuejs</title>
+    <title>Vuejs</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div id="class1">
+      <!-- Interpolacija -->
       <h1 id="title">Vuejs Framework 3</h1>
       <h2>{{"Hello" + " " + "World"}}</h2>
       <p>{{ subTitle }}</p>
       <p>Class: {{ classNumber }}/Vuejs</p>
       <p>We are learning: {{ courses[3] }}</p>
       <p>Reveresed Subtitle: {{ reverseString(subTitle) }}</p>
-      <p>Subtitle Uppercased: {{  subTitle.toUpperCase() }}</p>
+      <p>Subtitle Uppercased: {{ subTitle.toUpperCase() }}</p>
       <hr />
+      <!-- event handling -->
       <!-- <button v-on:click="subTitle = 'Vuejs Events'">Change Subtitle</button> -->
       <button v-on:click="changeSubtitle">Change Subtitle</button>
-      <hr>
+
+      <hr />
+      <!-- Crtanje na tagovi pod nekoj uslov -->
       <h3 v-if="showParagraph">Conditional Directive in Vuejs</h3>
       <h3 v-else-if="true">Else if Statement</h3>
       <h3 v-else>The Else Statement</h3>
+      <hr />
+      <p v-show="showParagraph">V-Show directive</p>
 
-      <button v-on:click="showParagraph = !showParagraph">Show/Hide h3 Above</button>
+      <button v-on:click="showParagraph = !showParagraph">
+        Show/Hide h3 Above
+      </button>
+
+      <hr />
+      <!-- V-BIND -->
+      <!-- <input type="text" v-bind:value="subTitle" v-on:input="onSubtitleInput($event)" /> -->
+      <input type="text" :value="subTitle" @input="onSubtitleInput($event)" />
     </div>
 
     <script src="https://unpkg.com/vue@next"></script>
-    <script>
-      const firstApplication = {
-        data() {
-          return {
-            subTitle: "Introduction to Vuejs",
-            classNumber: 1,
-            courses: ["HTML", "CSS", "JS", "Vuejs"],
-            showParagraph: true
-          };
-        },
-        methods: {
-          changeSubtitle() {
-            this.subTitle = "Vuejs Events";
-          },
-          reverseString(someString){
-            const reversed = someString.split("").reverse().join("");
-            return reversed;
-          },
-        },
-      };
-
-      Vue.createApp(firstApplication).mount("#class1");
-
-      //Razlicna sintaksa za deklariranje na funkcii
-      // var objekt = {
-      //   prva: function () {},
-      //   vtora() {},
-      //   treta: () => {},
-      // };
-
-      //Direktno moze da se vrati nekoja vrednost
-      //arrowFunction: () => "Hello",
-
-      //Arrow Syntax option
-      // const firstApplication = {
-      //   data: () => ({
-      //     subTitle: "Introduction to Vuejs",
-      //     classNumber: 1,
-      //     courses: ["HTML", "CSS", "JS", "Vuejs"],
-      //   }),
-      //   arrowFunction: () => "Drugo neso1",
-      // };
-
-      //Koristenje na eventi vo javasript
-      // <button onclick="changeSubtitle()">Change Subtitle</button>
-      // function changeSubtitle() {
-      //   document.querySelector("p").innerText =
-      //     "Intoduction to Events in Vuejs";
-      // }
-
-      //Koristenja na this vo normalen JS objekt
-      // var obj = {
-      //   name: "Igor",
-      //   changeName() {
-      //     this.name = "Riste";
-      //   },
-      // };
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>
