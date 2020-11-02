@@ -1,15 +1,12 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3.0 + Vite" />
+  <header>
+    <h1>Logo</h1>
+    <router-link to="/create-new-post">Create New Post</router-link>
+  </header>
+  <hr />
+
+  <router-view></router-view>
+  
+  <hr />
+  <footer>@Copyright SEDC 2020</footer>
 </template>
-
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
