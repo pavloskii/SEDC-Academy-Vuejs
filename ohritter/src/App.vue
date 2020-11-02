@@ -20,9 +20,12 @@
   </header>
 
   <router-view></router-view>
-
   <footer v-if="false">@Copyright SEDC 2020</footer>
 </template>
+
+<script>
+export default {};
+</script>
 
 <style>
 body {
