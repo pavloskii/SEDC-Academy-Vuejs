@@ -1,12 +1,31 @@
 <template>
-  <header>
-    <h1>Logo</h1>
-    <router-link to="/create-new-post">Create New Post</router-link>
+  <header v-if="false">
+    <nav class="navbar navbar-dark bg-dark shadow">
+      <router-link class="navbar-brand" to="/">
+        <img
+          src="./assets/logo.png"
+          width="30"
+          height="30"
+          class="d-inline-block align-top"
+          alt=""
+          loading="lazy"
+        />
+        Ohritter
+      </router-link>
+
+      <router-link to="/create-new-post" class="btn btn-light">
+        Create New Post
+      </router-link>
+    </nav>
   </header>
-  <hr />
 
   <router-view></router-view>
-  
-  <hr />
-  <footer>@Copyright SEDC 2020</footer>
+
+  <footer v-if="false">@Copyright SEDC 2020</footer>
 </template>
+
+<style>
+body {
+  background-color: gainsboro;
+}
+</style>
