@@ -80,11 +80,11 @@ export default {
         }
       )
         .then((response) => {
-          console.log(response);
+          this.$router.push("/login");
         })
         .catch((err) => {
           const errorMessage = err.response.data.error.message;
-          this.errors.push(errorMessage)
+          this.errors.push(errorMessage);
         });
 
       // axios("https://swapi.dev/api/people/1000")
@@ -118,14 +118,8 @@ export default {
 }
 </style>
 
-// 1. Pisite email i password 
-// 2. klikate na kopceto za registracija i da se
-povika // fukncija register 
-// 2.1 da ne moze da klikne po sto pati 
-3.
-Validacija na formata // 
-4. Http povik do nekoe API/Server 
-5. Dokolku se vrati
-error, treba da se prikazi //
- 6. Dokolku se e vo red treba da go nasocime userot
+// 1. Pisite email i password // 2. klikate na kopceto za registracija i da se
+povika // fukncija register // 2.1 da ne moze da klikne po sto pati 3.
+Validacija na formata // 4. Http povik do nekoe API/Server 5. Dokolku se vrati
+error, treba da se prikazi // 6. Dokolku se e vo red treba da go nasocime userot
 kon stranta za login
